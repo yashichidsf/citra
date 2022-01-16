@@ -156,6 +156,15 @@ add_executable(citra-qt
     uisettings.h
     qt_image_interface.cpp
     qt_image_interface.h
+    tas/stick_widget.cpp
+    tas/stick_widget.h
+    tas/tas_input_dialog.cpp
+    tas/tas_input_dialog.h
+    tas/tas_input_ui.h
+    tas/touch_widget.cpp
+    tas/touch_widget.h
+    tas/tas_checkbox.cpp
+    tas/tas_checkbox.h 
     updater/updater.cpp
     updater/updater.h
     updater/updater_p.h
