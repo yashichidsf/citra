@@ -208,6 +208,7 @@ private slots:
     void OnCreateGraphicsSurfaceViewer();
     void OnRecordMovie();
     void OnPlayMovie();
+    void OnTASInput();
     void OnStopRecordingPlayback();
     void OnCaptureScreenshot();
 #ifdef ENABLE_FFMPEG_VIDEO_DUMPER
