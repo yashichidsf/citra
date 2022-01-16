@@ -83,6 +83,8 @@
 #include "core/savestate.h"
 #include "core/settings.h"
 #include "game_list_p.h"
+#include "tas/tas_input_dialog.h"
+#include "tas/tas_input_ui.h"
 #include "ui_main.h"
 #include "video_core/renderer_base.h"
 #include "video_core/video_core.h"
@@ -772,6 +774,8 @@ void GMainWindow::ConnectMenuEvents() {
             Core::System::GetInstance().frame_limiter.AdvanceFrame();
         }
     });
+    connect(ui->action_TAS_Input, &QAction::triggered, this,
+            &GMainWindow::OnTASInput);
     connect(ui->action_Capture_Screenshot, &QAction::triggered, this,
             &GMainWindow::OnCaptureScreenshot);
 
@@ -1772,6 +1776,11 @@ void GMainWindow::OnConfigure() {
         Settings::values.touch_from_button_maps = old_touch_from_button_maps;
         Settings::LoadProfile(old_input_profile_index);
     }
+}
+
+void GMainWindow::OnTASInput() {
+    TASInputDialog TASDialog(this, hotkey_registry, !multiplayer_state->IsHostingPublicRoom());
+    TASDialog.exec();
 }
 
 void GMainWindow::OnLoadAmiibo() {
