@@ -254,7 +254,7 @@ public:
         cstickPadGrid->addWidget(cstickPadStick, 1, 0);
         cstickYSlideSpin = new QVBoxLayout();
         cstickYSlideSpin->setObjectName(QStringLiteral("cstickPadYSlideSpin"));
-        cstickPadY = new TASSlider(Qt::Vertical);
+        cstickPadY = new QSlider(Qt::Vertical);
         cstickPadY->setObjectName(QStringLiteral("cstickPadY"));
         cstickPadY->setMaximumWidth(60);
         cstickPadY->setRange(0,255);
