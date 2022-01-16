@@ -20,10 +20,8 @@
 #include <QtWidgets/QGroupBox>
 #include <tas/stick_widget.h>
 #include <tas/tas_checkbox.h>
-#include <tas/tas_slider.h>
 #include <tas/touch_widget.h>
 #include <tas/tas_input_dialog.h>
-#include <tas/aspect_ratio_widget.h>
 #include <QtWidgets/QGridLayout>
 #include "core/movie.h"
 #include "core/hle/service/hid/hid.h"
