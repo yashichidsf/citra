@@ -177,7 +177,7 @@ public:
 
         circlePadGrid = new QGridLayout(circlePadBox);
         circlePadGrid->setObjectName(QStringLiteral("circlePadGrid"));
-        circlePadBoxLayout = new QVBoxLayout(circlePadBox);
+        circlePadBoxLayout = new QVBoxLayout();
         circlePadBoxLayout->setObjectName(QStringLiteral("circlePadBoxLayout"));
         circlePadXSlideSpin = new QHBoxLayout();
         circlePadXSlideSpin->setObjectName(QStringLiteral("circlePadXSlideSpin"));
@@ -193,7 +193,7 @@ public:
         circlePadX_value->setValue(0);
         circlePadGrid->addWidget(circlePadX_value, 0,1);
               
-        circlePadStickYSlideSpin = new QHBoxLayout(circlePadBox);
+        circlePadStickYSlideSpin = new QHBoxLayout();
         circlePadStickYSlideSpin->setObjectName(QStringLiteral("circlePadStickYSlidespin"));
         circlePadStick = new StickWidget(circlePadBox, 255, 255);
         circlePadStick->setObjectName(QStringLiteral("circlePadStick"));
@@ -214,9 +214,6 @@ public:
         circlePadYSlideSpin->addWidget(circlePadY_value);
         circlePadGrid->addLayout(circlePadYSlideSpin, 1,1);
 
-        circlePadBoxLayout->addLayout(circlePadGrid);
-
-        circlePadBoxLayout->addWidget(circlePadLabel);
         circlePadBox->setLayout(circlePadBoxLayout);
         sticksGrid->addWidget(circlePadBox, 0,0);
         QObject::connect(circlePadX, &QSlider::valueChanged, circlePadX_value, &QSpinBox::setValue);
@@ -234,7 +231,7 @@ public:
         cstickPadBox->setMaximumHeight(300);
         cstickPadGrid = new QGridLayout(cstickPadBox);
         cstickPadGrid->setObjectName(QStringLiteral("cstickPadGrid"));
-        cstickPadBoxLayout = new QVBoxLayout(cstickPadBox);
+        cstickPadBoxLayout = new QVBoxLayout();
         cstickPadBoxLayout->setObjectName(QStringLiteral("cstickPadBoxLayout"));
         cstickXSlideSpin = new QHBoxLayout();
         cstickXSlideSpin->setObjectName(QStringLiteral("cstickPadXSlideSpin"));
@@ -247,7 +244,7 @@ public:
         cstickPadX_value->setRange(0,255);
         cstickPadGrid->addWidget(cstickPadX_value, 0,1);
 
-        cstickStickYSlideSpin = new QHBoxLayout(cstickPadBox);
+        cstickStickYSlideSpin = new QHBoxLayout();
         cstickStickYSlideSpin->setObjectName(QStringLiteral("cstickPadStickYSlidespin"));
         cstickPadStick = new StickWidget(cstickPadBox, 255, 255);
         cstickPadStick->setObjectName(QStringLiteral("cstickPadStick"));
@@ -265,9 +262,6 @@ public:
         cstickYSlideSpin->addWidget(cstickPadY_value);
         cstickPadGrid->addLayout(cstickYSlideSpin, 1,1);
 
-        cstickPadBoxLayout->addLayout(cstickPadGrid);
-
-        cstickPadBoxLayout->addWidget(cstickPadLabel);
         cstickPadBox->setLayout(cstickPadBoxLayout);
         sticksGrid->addWidget(cstickPadBox, 0,1);
 
