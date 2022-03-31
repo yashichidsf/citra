@@ -7,7 +7,6 @@
 #include "tas_input_dialog.h"
 #include "tas_input_ui.h"
 #include "tas_checkbox.h"
-#include "tas/aspect_ratio_widget.h"
 
 TASInputDialog::TASInputDialog(QWidget* parent, HotkeyRegistry& registry, bool enable_web_config)
     : QDialog(parent), ui(std::make_unique<Ui::TASInputDialog>()), registry(registry) {
